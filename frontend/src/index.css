@@ -1,0 +1,139 @@
+/* Κεντρικό Container */
+body {
+  background-color: #f4f7f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  word-wrap: break-word;
+}
+
+.app-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 10px 10px lightblue;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px 50px; /* two values */
+  background: white;
+  width: 300px;
+  height: 500px;
+  word-wrap: break-word;
+}
+
+h1, h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+/* Φόρμες και Inputs */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  word-wrap: break-word;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  word-wrap: break-word;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #4a90e2;
+  word-wrap: break-word;
+}
+
+/* Κουμπιά */
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  word-wrap: break-word;
+}
+
+button:hover {
+  background-color: #357abd;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+}
+
+button.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Λίστα Tasks */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 150px;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  min-width: 0;
+}
+
+li span.task-title {
+  text-decoration: line-through;
+  color: black;
+  font-size: 18px;
+  word-wrap: break-word;
+  overflow: hidden;
+  flex: 1; 
+  margin-right: 10px;
+}
+
+/* Styling για το Modal Background (σκοτεινό φόντο) */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Ημιδιάφανο μαύρο */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Styling για το παράθυρο του Modal */
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

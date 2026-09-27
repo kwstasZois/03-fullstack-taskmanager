@@ -1,0 +1,32 @@
+import { useState } from 'react';
+import LoginForm from './components/LoginForm';
+import TaskList from './components/TaskList';
+
+function App() {
+  const [token, setToken] = useState(localStorage.getItem('token') || null);
+
+  const handleLoginSuccess = (newToken) => {
+    setToken(newToken);
+  };
+
+  const handleLogout = () => {
+    setToken(null);
+    localStorage.removeItem('token');
+  };
+
+  return (
+    <div className="App">
+      <h1>Task Manager</h1>
+      {token ? (
+        <div>
+          <button onClick={handleLogout}>Logout</button>
+          <TaskList token={token} />
+        </div>
+      ) : (
+        <LoginForm onLoginSuccess={handleLoginSuccess} />
+      )}
+    </div>
+  );
+}
+
+export default App;
